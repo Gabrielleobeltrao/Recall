@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "recall",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,6 +36,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.24.6",
+    "react-router-dom": "^6.23.1",
     "tailwindcss": "^3.4.3"
   }
 }
