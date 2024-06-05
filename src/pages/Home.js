@@ -1,8 +1,12 @@
 import HeaderHome from "../components/HeaderHome"
+import BottonNewNote from "../components/ButtonNewNote"
 
 function Home() {
     return (
-        <HeaderHome />
+        <div>
+            <HeaderHome />
+            <BottonNewNote />
+        </div>
     )
 }
 
