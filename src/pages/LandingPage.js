@@ -1,6 +1,10 @@
+import HeaderLandingPage from "../components/HeaderLandingPage"
+
 function LandingPage() {
     return (
-        <h1>LandingPage</h1>
+        <div>
+            <HeaderLandingPage />
+        </div>
     )
 }
 
