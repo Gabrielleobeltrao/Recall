@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: ['BRCobane', 'sans-serif'],
       },
+      translate: {
+        'dvw': '100dvw',
+      }
     },
   },
   plugins: [

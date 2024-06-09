@@ -1,10 +1,16 @@
 import IconeX from "../../assets/x.svg"
 
-function FormNewNote() {
+function FormNewNote({ isVisible, onClickVisibility }) {
     return (
-        <div className="w-screen h-screen fixed top-0 left-0 z-10">
-            <div className="bg-white w-[calc(100%-5rem)] h-[calc(100%-5rem)] top-10 left-10 fixed z-20 rounded-2xl flex flex-col items-center">
-                <img className="w-7 h-7 self-end mt-5 mr-5" src={IconeX} alt="Fechar janela" />
+        <div 
+            onClick={onClickVisibility}
+            className={`w-screen h-screen fixed top-0 left-0 z-20 transform transition-transform duration-700 ${isVisible ? 'translate-x-0' : '-translate-x-dvw'}`}
+        >
+            <div className={"bg-white w-[calc(100%-5rem)] h-[calc(100%-5rem)] top-10 left-10 fixed z-20 rounded-2xl flex flex-col items-center"}>
+                <img
+                    onClick={onClickVisibility}
+                    className="w-7 h-7 self-end mt-5 mr-5" src={IconeX} alt="Fechar janela"
+                />
                 <h3 className="font-bold text-xl pt-7 pb-12">Nova Anotação</h3>
                 <div className="w-full h-full px-5 flex flex-col gap-9">
                     <textarea 
@@ -50,7 +56,6 @@ function FormNewNote() {
                 </div>
                 <button className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 min-h-14 rounded-lg text-white font-bold mt-11 mb-7">Criar Anotação</button>
             </div>
-            <div className="bg-black opacity-50 w-screen h-screen fixed top-0 left-0"/>
         </div>
     )
 }
