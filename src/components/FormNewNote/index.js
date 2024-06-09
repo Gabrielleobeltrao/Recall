@@ -2,8 +2,7 @@ import IconeX from "../../assets/x.svg"
 
 function FormNewNote({ isVisible, onClickVisibility }) {
     return (
-        <div 
-            onClick={onClickVisibility}
+        <div
             className={`w-screen h-screen fixed top-0 left-0 z-20 transform transition-transform duration-700 ${isVisible ? 'translate-x-0' : '-translate-x-dvw'}`}
         >
             <div className={"bg-white w-[calc(100%-5rem)] h-[calc(100%-5rem)] top-10 left-10 fixed z-20 rounded-2xl flex flex-col items-center"}>
