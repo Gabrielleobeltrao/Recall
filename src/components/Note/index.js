@@ -2,7 +2,7 @@ import StyleNote from "../../assets/StyleNote.svg"
 
 function Note(props) {
     return (
-        <div 
+        <div
             className={`
                 min-w-52 max-w-52 h-auto relative rounded-lg pb-7 pt-4 px-2.5 m-2 text-white row-span-1
                 ${props.color === 'pink' ? 'bg-pink' : ''}
