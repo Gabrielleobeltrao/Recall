@@ -6,7 +6,7 @@ import IconTrash from "../../assets/IconTrash.svg"
 function NoteFullPage({ isVisibleNote, onClickVisibility, note }) {
     return (
         <div 
-            className={`w-screen h-[calc(100%-5rem)] z-20 fixed top-10 flex flex-col items-center transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}
+            className={`w-screen h-[calc(100%-10rem)] z-20 fixed top-20 flex flex-col items-center transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}
         >
             <div className={`flex justify-end bg-${note ? note.color : 'pink'} w-[calc(100%-5rem)] rounded-tr-2xl rounded-tl-2xl pb-5`}>
                 <img
