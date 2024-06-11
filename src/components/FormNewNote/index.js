@@ -45,7 +45,7 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                         type="radio"
                         name="color"
                         value="pink"
-                        checked
+                        checked={color === "pink"}
                         required
                     />
                     <input 
@@ -54,6 +54,7 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                         type="radio"
                         name="color"
                         value="pink-purple"
+                        checked={color === "pink-purple"}
                         required
                     />
                     <input 
@@ -63,6 +64,7 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                         type="radio"
                         name="color"
                         value="purple-blue"
+                        checked={color === "purple-blue"}
                         required
                     />
                     <input 
@@ -72,6 +74,7 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                         type="radio"
                         name="color"
                         value="blue"
+                        checked={color === "blue"}
                         required
                     />
                 </div>

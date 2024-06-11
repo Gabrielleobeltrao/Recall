@@ -3,7 +3,7 @@ import IconeXWhite from "../../assets/XWhite.svg"
 import IconEdit from "../../assets/IconEdit.svg"
 import IconTrash from "../../assets/IconTrash.svg"
 
-function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote }) {
+function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote, setIsVisibleEditForm }) {
     return (
         <div 
             className={`w-screen h-[calc(100%-10rem)] z-20 fixed top-20 flex flex-col items-center transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}
@@ -11,7 +11,9 @@ function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote }) {
             <div className={`flex justify-end bg-${note ? note.color : 'pink'} w-[calc(100%-5rem)] rounded-tr-2xl rounded-tl-2xl pb-5`}>
                 <img
                     onClick={onClickVisibility}
-                    className="w-7 h-7 mt-5 mr-5" src={IconeXWhite} alt="Fechar janela" 
+                    className="w-7 h-7 mt-5 mr-5"
+                    src={IconeXWhite}
+                    alt="Fechar janela" 
                 />
             </div>
             <div className={`bg-${note ? note.color : 'pink'} w-[calc(100%-5rem)] z-20 flex flex-col items-center overflow-y-auto`}>
@@ -24,7 +26,11 @@ function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote }) {
                 <div className={`bg-${note ? note.color : 'pink'} w-full rounded-bl-2xl flex flex-col items-center justify-between px-4 pb-2.5`}>
                     <div className="bg-white w-full h-1.5 rounded-full mb-2.5"/>
                     <div className="flex w-full justify-between px-4">
-                        <img src={IconEdit} alt="Edit butoom"/>
+                        <img
+                            onClick={() => setIsVisibleEditForm()}
+                            src={IconEdit}
+                            alt="Edit butoom"
+                        />
                         <img
                             onClick={() => deleteNote(note)}
                             src={IconTrash}
