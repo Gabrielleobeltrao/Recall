@@ -3,7 +3,7 @@ import IconeXWhite from "../../assets/XWhite.svg"
 import IconEdit from "../../assets/IconEdit.svg"
 import IconTrash from "../../assets/IconTrash.svg"
 
-function NoteFullPage({ isVisibleNote, onClickVisibility, note }) {
+function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote }) {
     return (
         <div 
             className={`w-screen h-[calc(100%-10rem)] z-20 fixed top-20 flex flex-col items-center transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}
@@ -25,7 +25,11 @@ function NoteFullPage({ isVisibleNote, onClickVisibility, note }) {
                     <div className="bg-white w-full h-1.5 rounded-full mb-2.5"/>
                     <div className="flex w-full justify-between px-4">
                         <img src={IconEdit} alt="Edit butoom"/>
-                        <img src={IconTrash} alt="Trash butoom"/>
+                        <img
+                            onClick={() => deleteNote(note)}
+                            src={IconTrash}
+                            alt="Trash butoom"
+                        />
                     </div>
                 </div>
                 <img className="w-16 absolute bottom-0 right-0 z-10" src={BottomLeftIconRecall} alt="#" />

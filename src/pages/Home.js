@@ -7,6 +7,9 @@ import NoteFullPage from '../components/NoteFullPage';
 
 function Home() {
 
+    const [isVisible, setIsVisible] = useState(false)
+    const [isVisibleNote, setIsVisibleNote] = useState(false)
+    const [note, setNote] = useState(null);
     const [notes, setNotes] = useState([
         {title:"Esse é o primeiro teste", text:"Estou testando as notes da Recall", color:"blue"},
     ])
@@ -15,9 +18,10 @@ function Home() {
         setNotes([newNote, ...notes]);
     };
 
-    const [isVisible, setIsVisible] = useState(false)
-    const [isVisibleNote, setIsVisibleNote] = useState(false)
-    const [note, setNote] = useState(null);
+    const deleteNote = (noteToDelete) => {
+        setNotes(notes.filter(note => note !== noteToDelete))
+        setIsVisibleNote(false)
+    }
 
     const handleNoteClick = (note) => {
         setNote(note)
@@ -46,6 +50,7 @@ function Home() {
                     isVisibleNote={isVisibleNote}
                     onClickVisibility={() => setIsVisibleNote(false)}
                     note={note}
+                    deleteNote={deleteNote}
                 />
                 <div className={`bg-white w-screen h-screen fixed top-0 left-0 z-10 transition-opacity duration-1000 ease-in-out ${isVisibleNote ? 'opacity-90' : 'opacity-0 pointer-events-none'}`}/>
             </section>
