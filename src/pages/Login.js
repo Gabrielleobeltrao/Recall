@@ -2,8 +2,8 @@ import LogoByOne from "../components/LogoByOne"
 
 function Login() {
     return (
-        <div className="lg:flex lg:w-full lg:justify-between">
-            <div className="lg:w-full">
+        <div className="xl:flex xl:w-full xl:justify-between">
+            <div className="xl:w-full">
                 <LogoByOne className="pt-24 pb-16"/>
                 <div className="flex flex-col gap-5 px-16">
                     <input 
@@ -29,7 +29,7 @@ function Login() {
                 </div>
             </div>
             <div className="px-10 pt-12">
-                <div className="w-full h-1 bg-gradient-to-r from-pink via-purple to-blue lg:h-full lg:w-1"/>
+                <div className="w-full h-1 bg-gradient-to-r from-pink via-purple to-blue xl:h-full xl:w-1"/>
             </div>
             <div>
 
