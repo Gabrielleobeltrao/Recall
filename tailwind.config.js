@@ -19,6 +19,9 @@ module.exports = {
       },
       translate: {
         'dvw': '100dvw',
+      },
+      width: {
+        '300': '18.75rem'
       }
     },
   },

@@ -17,8 +17,8 @@ function Home() {
     ])
 
     const addNote = (newNote) => {
-        setNotes([newNote, ...notes]);
-    };
+        setNotes([newNote, ...notes])
+    }
 
     const deleteNote = (noteToDelete) => {
         setNotes(notes.filter(note => note !== noteToDelete))
@@ -28,21 +28,21 @@ function Home() {
     const editNote = (noteToEdit, updatedNote) => {
         const updatedNotes = notes.map(note =>
             note === noteToEdit ? updatedNote : note
-        );
-        setNotes(updatedNotes);
-        setIsVisibleEditForm(false);
-        setIsVisibleNote(false);
-    };
+        )
+        setNotes(updatedNotes)
+        setNote(updatedNote)
+        setIsVisibleEditForm(false)
+    }
 
     const handleNoteClick = (note) => {
         setNote(note)
         setIsVisibleNote(true)
-    };
+    }
 
     return (
         <div>
             <HeaderHome />
-            <div className="flex flex-wrap justify-around items-start px-4">
+            <div className="flex flex-wrap justify-evenly items-start px-4">
                 {notes.map((note, index) => (
                     <div 
                         key={index} 

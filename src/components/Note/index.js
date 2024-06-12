@@ -4,7 +4,7 @@ function Note(props) {
     return (
         <div
             className={`
-                min-w-52 max-w-52 h-auto relative rounded-lg pb-7 pt-4 px-2.5 m-2 text-white row-span-1
+                w-52 sm:w-300 h-auto relative rounded-lg pb-7 pt-4 px-2.5 m-2 text-white row-span-1
                 ${props.color === 'pink' ? 'bg-pink' : ''}
                 ${props.color === 'pink-purple' ? 'bg-pink-purple' : ''}
                 ${props.color === 'purple-blue' ? 'bg-purple-blue' : ''}
