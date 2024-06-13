@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import LogoByOne from "../components/LogoByOne"
 
 function Login() {
@@ -20,12 +21,16 @@ function Login() {
                     />
                 </div>
                 <button 
-                    className="px-16 py-1 w-full text-end font-bold tracking-wide text-xs"
+                    className="px-16 py-1 w-full text-end font-bold tracking-wide text-sm"
                 >Esqueci a senha</button>
                 <div className="flex justify-center w-full pt-5">
                     <button 
-                        className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide"
+                        className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
                     >Entrar</button>
+                </div>
+                <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
+                    <h3>Ainda não tem uma conta?</h3>
+                    <Link to="/register" className="text-gradient">Crie uma conta aqui</Link>
                 </div>
             </div>
             <div className="px-10 pt-12 xl:pt-0 xl:h-full">
