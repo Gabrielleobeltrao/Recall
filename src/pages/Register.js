@@ -27,7 +27,7 @@ function Register() {
                 </div>
                 <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
                     <h3>Ja tem uma conta?</h3>
-                    <Link className="text-gradient">Entre na sua conta aqui</Link>
+                    <Link to="/login" className="text-gradient">Entre na sua conta aqui</Link>
                 </div>
             </div>
         </div>
