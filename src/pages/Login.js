@@ -1,33 +1,59 @@
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { auth } from "../service/fireBaseConfig"
 import LogoByOne from "../components/LogoByOne"
 
 function Login() {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [signInWithEmailAndPassword, user, loading] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        signInWithEmailAndPassword(email, password)
+    }
+
+    useEffect(() => {
+        if (user) {
+            navigate('/home');
+        }
+    }, [user, navigate]);
+
     return (
         <div className="xl:flex xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
             <div className="xl:w-full">
                 <LogoByOne className="pt-24 pb-16 xl:pt-0"/>
-                <div className="flex flex-col gap-5 px-16">
+                <form onSubmit={handleLogin} className="flex flex-col px-16">
                     <input 
-                        className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5" 
+                        className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5 mb-5" 
                         type="email" 
                         id="email" 
                         placeholder="Email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
                     />
                     <input 
                         className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5" 
                         type="password" 
                         id="password" 
                         placeholder="Password"
+                        onChange={(e) => setPassword(e.target.value)}
+                        value={password}
                     />
-                </div>
-                <button 
-                    className="px-16 py-1 w-full text-end font-bold tracking-wide text-sm"
-                >Esqueci a senha</button>
-                <div className="flex justify-center w-full pt-5">
                     <button 
-                        className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
-                    >Entrar</button>
-                </div>
+                        className="px-16 py-1 w-full text-end font-bold tracking-wide text-sm"
+                    >Esqueci a senha</button>
+                    <div className="flex justify-center w-full pt-5">
+                        <button 
+                            type="submit"
+                            className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
+                        >Entrar</button>
+                    </div>
+                </form>
+                {loading && <p>Loading...</p>}
                 <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
                     <h3>Ainda não tem uma conta?</h3>
                     <Link to="/register" className="text-gradient">Crie uma conta aqui</Link>
