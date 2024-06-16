@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import PrivateRoute from './routes/PrivateRoute';
 
 export default function AppRouter() {
   return (
@@ -13,7 +14,7 @@ export default function AppRouter() {
         <Route path="/" element={<LandingPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/home' element={<PrivateRoute><Home /></PrivateRoute>} />
       </Routes>
     </BrowserRouter>
   );
