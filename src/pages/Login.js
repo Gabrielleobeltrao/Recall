@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { auth } from "../service/fireBaseConfig"
 import LogoByOne from "../components/LogoByOne"
+import ButtonLoginProvider from "../components/ButtonLoginProvider"
 
 function Login() {
 
@@ -62,8 +63,10 @@ function Login() {
             <div className="px-10 pt-12 xl:pt-0 xl:h-full">
                 <div className="w-full h-1 bg-gradient-to-r from-pink via-purple to-blue xl:h-full xl:w-1"/>
             </div>
-            <div>
-
+            <div className="flex flex-col justify-around gap-6 pt-14 px-10 xl:w-full">
+                <ButtonLoginProvider nameProvider='Google'/>
+                <ButtonLoginProvider nameProvider='Apple'/>
+                <ButtonLoginProvider nameProvider='Microsoft'/>
             </div>
         </div>
     )
