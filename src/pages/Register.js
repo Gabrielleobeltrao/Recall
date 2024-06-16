@@ -1,23 +1,34 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import LogoByOne from "../components/LogoByOne"
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from "../service/fireBaseConfig";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { auth, db } from "../service/fireBaseConfig"
+import { doc, setDoc } from 'firebase/firestore'
 
 function Register() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [createUserWithEmailAndPassword, loading] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const navigate = useNavigate();
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault()
-        createUserWithEmailAndPassword(email, password);
+        const userCredential = await createUserWithEmailAndPassword(email, password)
+        if (userCredential) {
+            const user = userCredential.user;
+            await setDoc(doc(db, 'users', user.uid), {
+                email: user.email,
+                createdAt: new Date(),
+            })
+        }
     };
 
-    if(loading) {
-        return <p>loading...</p>
-    }
+    useEffect(() => {
+        if (user) {
+            navigate('/home');
+        }
+    }, [user, navigate]);
 
     return (
         <div className="w-screen h-screen flex items-center xl:justify-center xl:items-center xl:py-16">
