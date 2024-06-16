@@ -45,7 +45,7 @@ function Login() {
                         value={password}
                     />
                     <button 
-                        className="px-16 py-1 w-full text-end font-bold tracking-wide text-sm"
+                        className="px-2 py-1 w-full text-end font-bold tracking-wide text-sm"
                     >Esqueci a senha</button>
                     <div className="flex justify-center w-full pt-5">
                         <button 
