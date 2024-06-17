@@ -26,8 +26,8 @@ function Login() {
 
     return (
         <div className="py-10 xl:flex xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
-            <div className="xl:w-full">
-                <LogoByOne className="pt-14 pb-16 xl:pt-0"/>
+            <div className="pt-10 xl:w-full">
+                <LogoByOne />
                 <form onSubmit={handleLogin} className="flex flex-col px-16">
                     <input 
                         className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5 mb-5" 
