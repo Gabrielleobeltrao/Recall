@@ -25,7 +25,7 @@ function Login() {
     }, [user, googleUser, navigate]);
 
     return (
-        <div className="flex flex-col justify-center h-screen py-10 xl:flex xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
+        <div className="flex flex-col justify-center h-screen py-10 xl:flex-row xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
             <div className="pt-10 xl:pt-0 xl:w-full">
                 <LogoByOne />
                 <form onSubmit={handleLogin} className="flex flex-col px-16">
