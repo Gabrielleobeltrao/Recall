@@ -1,0 +1,38 @@
+import { useState } from "react"
+import LogoByOne from "../components/LogoByOne"
+import { Link } from "react-router-dom"
+
+function RedefinePassword() {
+    const [email, setEmail] = useState('')
+    
+    return (
+        <section className="flex flex-col items-center justify-center w-screen h-screen">
+            <div className="w-full pb-28 xl:w-1/2">
+                <div className="w-full">
+                    <LogoByOne />
+                </div>
+                <form className="flex flex-col items-center w-full px-16">
+                    <h3 className="font-bold text-base pb-5 xl:text-lg">Insira seu email para redefinir a senha</h3>
+                    <input 
+                        className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5 mb-8" 
+                        type="email" 
+                        id="email" 
+                        placeholder="Email"
+                        onChange=""
+                        value={email}
+                    />
+                    <button 
+                        type="submit"
+                        className="bg-gradient-to-r from-pink via-purple to-blue w-3/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
+                    >Enviar email</button>
+                </form>
+                <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
+                    <h3>Ainda não tem uma conta?</h3>
+                    <Link to="/register" className="text-gradient">Crie uma conta aqui</Link>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default RedefinePassword
