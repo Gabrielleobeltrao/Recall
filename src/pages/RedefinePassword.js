@@ -1,22 +1,24 @@
 import { useState } from "react";
 import LogoByOne from "../components/LogoByOne";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { auth } from "../service/fireBaseConfig";
 
 function RedefinePassword() {
     const [email, setEmail] = useState('')
-    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth)
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (email) {
-            await sendPasswordResetEmail(email);
-            alert('Email de redefinição de senha enviado!');
+            await sendPasswordResetEmail(email)
+            alert('Email de redefinição de senha enviado!')
+            navigate('/login')
         } else {
-            alert('Por favor, insira um email válido.');
+            alert('Por favor, insira um email válido.')
         }
-    };
+    }
     
     return (
         <section className="flex flex-col items-center justify-center w-screen h-screen">
