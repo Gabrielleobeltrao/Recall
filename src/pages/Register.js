@@ -54,7 +54,7 @@ function Register() {
                     <div className="flex justify-center w-full pt-5">
                         <button 
                             type="submit"
-                            className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
+                            className="bg-gradient-to-r from-pink via-purple to-blue w-3/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
                         >Criar</button>
                     </div>
                 </form>

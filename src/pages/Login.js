@@ -25,8 +25,8 @@ function Login() {
     }, [user, googleUser, navigate]);
 
     return (
-        <div className="py-10 xl:flex xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
-            <div className="pt-10 xl:w-full">
+        <div className="flex flex-col justify-center h-screen py-10 xl:flex xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
+            <div className="pt-10 xl:pt-0 xl:w-full">
                 <LogoByOne />
                 <form onSubmit={handleLogin} className="flex flex-col px-16">
                     <input 
@@ -45,13 +45,14 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                     />
-                    <button 
+                    <Link 
+                        to='/redefinepassword'
                         className="px-2 py-1 w-full text-end font-bold tracking-wide text-sm"
-                    >Esqueci a senha</button>
+                    >Esqueci a senha</Link>
                     <div className="flex justify-center w-full pt-5">
                         <button 
                             type="submit"
-                            className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
+                            className="bg-gradient-to-r from-pink via-purple to-blue w-3/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
                         >Entrar</button>
                     </div>
                 </form>
