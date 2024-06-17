@@ -66,8 +66,6 @@ function Login() {
             </div>
             <div className="flex flex-col justify-around gap-6 pt-14 px-10 xl:w-full">
                 <ButtonLoginProvider nameProvider='Google' onClick={() => signInWithGoogle()}/>
-                <ButtonLoginProvider nameProvider='Apple'/>
-                <ButtonLoginProvider nameProvider='Microsoft'/>
             </div>
         </div>
     )

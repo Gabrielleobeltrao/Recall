@@ -1,16 +1,10 @@
 import LogoGoogle from "../../assets/logo-google-white.svg"
-import LogoApple from "../../assets/logo-apple-white.svg"
-import LogoMicrosoft from "../../assets/logo-microsoft-white.svg"
 
 function ButtonLoginProvider({ nameProvider, onClick }) {
     let logoProvider
 
     if(nameProvider === 'Google') {
         logoProvider = LogoGoogle
-    } else if (nameProvider === 'Apple') {
-        logoProvider = LogoApple
-    } else if (nameProvider === 'Microsoft') {
-        logoProvider = LogoMicrosoft
     }
 
     return (
