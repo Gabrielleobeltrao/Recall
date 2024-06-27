@@ -29,18 +29,18 @@ function FormEditNote({ isVisibleEditForm, setIsVisibleEditForm, note, editNote 
                     src={IconeX} 
                     alt="Fechar janela" 
                 />
-                <h3 className="font-bold text-xl pt-7 pb-12">Editar Anotação</h3>
+                <h3 className="font-bold text-xl pt-7 pb-12">Edit Annotation</h3>
                 <div className="w-full h-full px-5 flex flex-col gap-9">
                     <textarea
                         onChange={(e) => setTitle(e.target.value)}
                         className="bg-neutral-200 rounded-2xl w-full h-1/6 px-3 font-bold py-1.5 placeholder:text-black placeholder:text-base"
-                        placeholder="Titulo"
+                        placeholder="Title"
                         value={title}
                     />
                     <textarea
                         onChange={(e) => setText(e.target.value)}
                         className="bg-neutral-200 rounded-2xl w-full h-5/6 px-3 py-1.5 placeholder:text-black placeholder:text-sm"
-                        placeholder="Texto"
+                        placeholder="Content"
                         value={text}
                     />
                 </div>
@@ -83,7 +83,7 @@ function FormEditNote({ isVisibleEditForm, setIsVisibleEditForm, note, editNote 
                 <button
                     onClick={handleSave}
                     className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 min-h-14 rounded-lg text-white font-bold mt-11 mb-7"
-                >Salvar Alterações</button>
+                >Save editions</button>
             </div>
         </div>
     )

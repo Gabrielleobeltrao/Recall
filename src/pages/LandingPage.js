@@ -13,8 +13,8 @@ function LandingPage() {
         <div>
             <HeaderLandingPage />
             <section className="flex flex-col atems-center text-center mx-12 h-full pt-16">
-                <h1 className="font-bold pb-12 pt-10 text-xl">Sua Memória Digital:<br />Notas Eficientes e Seguras</h1>
-                <p className="pb-5 text-sm">Recall é um aplicativo web intuitivo e eficiente que permite aos usuários criar notas de forma rápida e segura. Ideal para quem precisa organizar suas ideias, tarefas ou qualquer tipo de informação importante o Recall proporciona uma experiência de usuário simples e direta, facilitando a gestão das suas notas diárias.</p>
+                <h1 className="font-bold pb-12 pt-10 text-xl">Your Digital Memory:<br />Efficient and Secure Notes</h1>
+                <p className="pb-5 text-sm">Recall is an intuitive and efficient web application that allows users to create notes quickly and securely. Ideal for those who need to organize their ideas, tasks or any type of important information, Recall provides a simple and direct user experience, making it easier to manage your daily notes.</p>
                 <img 
                     className="size-10/12 self-center" 
                     src={Iphone} 
@@ -22,9 +22,9 @@ function LandingPage() {
                 />
             </section>
             <section className="flex flex-col mx-12">
-                <h2 className="font-bold text-base text-base pt-14 pb-2 text-center">Funcionalidades</h2>
+                <h2 className="font-bold text-base text-base pt-14 pb-2 text-center">Functionalities</h2>
                 <div className="flex flex-col w-full gap-5">
-                    <p className="text-sm w-full pt-4">Criar notas no Recall é simples e rápido. Basta clicar no botão "Nova Nota", adicionar seu título, conteúdo e cor, e salvar. Suas notas são imediatamente armazenadas, acessíveis de qualquer dispositivo conectado</p>
+                    <p className="text-sm w-full pt-4">Creating notes in Recall is simple and fast. Just click the "New Note" button, add your title, content and color, and save. Your notes are immediately stored, accessible from any connected device</p>
                     <div className="w-full px-3">
                         <img 
                             className="h-auto rounded-xl"
@@ -34,7 +34,7 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-5 pt-10">
-                    <p className="text-sm w-full pt-4">Editar suas notas é fácil com o Recall. Basta selecionar a nota que deseja modificar, clicar no botão "Editar Nota", fazer as alterações necessárias. Suas mudanças são atualizadas instantaneamente.</p>
+                    <p className="text-sm w-full pt-4">Editing your notes is easy with Recall. Just select the note you want to modify, click the "Edit Note" button, make the necessary changes. Your changes are updated instantly.</p>
                     <div className="w-full px-3">
                         <img 
                             className="h-auto rounded-xl"
@@ -44,7 +44,7 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-5 pt-10">
-                    <p className="text-sm w-full pt-4">Deletar notas no Recall é direto. Simplesmente selecione a nota que deseja remover e clicar no botão "Deletar Nota". A nota será permanentemente apagada, mantendo seu espaço de trabalho organizado.</p>
+                    <p className="text-sm w-full pt-4">Deleting notes in Recall is straightforward. Simply select the note you want to remove and click the "Delete Note" button. The note will be permanently deleted, keeping your workspace organized.</p>
                     <div className="w-full px-3">
                         <img 
                             className="h-auto rounded-xl"
@@ -54,7 +54,7 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-5 pt-10">
-                    <p className="text-sm w-full pt-4">O Recall utiliza o login com Google para uma autenticação rápida e segura. Comece a usar o Recall sem complicações e com total segurança.</p>
+                    <p className="text-sm w-full pt-4">Recall uses Google login for fast and secure authentication. Start using Recall without complications and in complete safety.</p>
                     <div className="w-full px-3">
                         <img 
                             className="h-auto rounded-xl"
@@ -65,12 +65,12 @@ function LandingPage() {
                 </div>
             </section>
             <section className="mx-2.5 text-center">
-                <h2 className="font-bold text-base pt-20 pb-6 text-center">Sobre o Recall</h2>
+                <h2 className="font-bold text-base pt-20 pb-6 text-center">About Recall</h2>
                 <div className="flex gap-2.5 w-full text-white">
                     <div className="w-1/2">
                         <div className="px-2.5 pt-2.5 pb-12 relative bg-purple-blue rounded-xl">
-                            <h3 className="font-bold pb-2.5 text-base">Nossa historia</h3>
-                            <p className="text-sm">O Recall nasceu da necessidade de uma solução simples e eficiente para a organização de notas. Percebendo a dificuldade de gerenciar ideias, tarefas e informações importantes em várias plataformas, decidimos criar uma ferramenta que unisse praticidade e segurança. Com o uso das tecnologias, como React, Tailwind CSS, e Firebase, desenvolvemos o Recall para oferecer uma experiência de usuário intuitiva e eficaz.</p>
+                            <h3 className="font-bold pb-2.5 text-base">Our story</h3>
+                            <p className="text-sm">Recall was born out of the need for a simple and efficient solution for organizing notes. Realizing the difficulty of managing ideas, tasks and important information across multiple platforms, we decided to create a tool that combined practicality and security. Using technologies such as React, Tailwind CSS, and Firebase, we developed Recall to offer an intuitive and effective user experience.</p>
                             <img 
                                 className="absolute right-0 bottom-0 w-10 h-10"
                                 src={StyleNote}
@@ -80,8 +80,8 @@ function LandingPage() {
                     </div>
                     <div className="w-1/2">
                         <div className="px-2.5 pt-2.5 pb-12 relative bg-pink-purple rounded-xl">
-                            <h3 className="font-bold pb-2.5 text-base">Oque nos queremos</h3>
-                            <p className="text-sm">O objetivo do Recall é proporcionar aos usuários uma maneira fácil e segura de organizar suas notas e informações. Esperamos que o Recall ajude as pessoas a manterem suas ideias e tarefas bem organizadas, acessíveis em qualquer lugar e a qualquer momento, aumentando a produtividade e reduzindo a confusão do dia a dia. Queremos criar uma comunidade de usuários satisfeitos que confiem no Recall como sua principal ferramenta de organização pessoal.</p>
+                            <h3 className="font-bold pb-2.5 text-base">What do we want</h3>
+                            <p className="text-sm">Recall's goal is to provide users with an easy and secure way to organize their notes and information. We hope Recall will help people keep their ideas and tasks well organized, accessible anywhere, anytime, increasing productivity and reducing everyday clutter. We want to create a community of happy users who trust Recall as their primary personal organization tool.</p>
                             <img 
                                 className="absolute right-0 bottom-0 w-10 h-10"
                                 src={StyleNote}
@@ -93,10 +93,10 @@ function LandingPage() {
             </section>
             <section className="m-2.5 py-2.5 bg-pink rounded-xl text-white text-sm font-bold">
                 <div className="flex flex-col gap-2 px-7 pt-3">
-                    <Link to='/login'>Entrar</Link>
-                    <Link to='/register'>Criar Conta</Link>
-                    <Link to='/redefinepassword'>Recuperar Senha</Link>
-                    <a className="pt-1" href="">
+                    <Link to='/login'>Enter</Link>
+                    <Link to='/register'>Create an account</Link>
+                    <Link to='/redefinepassword'>Recover Password</Link>
+                    <a className="pt-1" href="#">
                         <img 
                             className="w-7 h-7"
                             src={Instagram}

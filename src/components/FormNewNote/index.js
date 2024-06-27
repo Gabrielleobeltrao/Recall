@@ -21,19 +21,19 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                     onClick={onClickVisibility}
                     className="w-7 h-7 self-end mt-5 mr-5" src={IconeX} alt="Fechar janela"
                 />
-                <h3 className="font-bold text-xl pt-7 pb-12">Nova Anotação</h3>
+                <h3 className="font-bold text-xl pt-7 pb-12">New note</h3>
                 <div className="w-full h-full px-5 flex flex-col gap-9">
                     <textarea 
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
                         className="bg-neutral-200 rounded-2xl w-full h-1/6 px-3 font-bold py-1.5 placeholder:text-black placeholder:text-base"
-                        placeholder="Titulo"
+                        placeholder="Title"
                     />
                     <textarea 
                         onChange={(e) => setText(e.target.value)}
                         value={text}
                         className="bg-neutral-200 rounded-2xl w-full h-5/6 px-3 py-1.5 placeholder:text-black placeholder:text-sm"
-                        placeholder="Texto"
+                        placeholder="Content"
                     />
                 </div>
                 <div className="flex flex-row justify-between w-full px-14 pt-11">
@@ -79,7 +79,7 @@ function FormNewNote({ isVisible, onClickVisibility, addNote }) {
                 <button 
                     onClick={handleAddNote}
                     className="bg-gradient-to-r from-pink via-purple to-blue w-2/4 min-h-14 rounded-lg text-white font-bold mt-11 mb-7"
-                >Criar Anotação</button>
+                >Create note</button>
             </div>
         </div>
     )

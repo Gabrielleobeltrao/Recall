@@ -55,12 +55,12 @@ function Register() {
                         <button 
                             type="submit"
                             className="bg-gradient-to-r from-pink via-purple to-blue w-3/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
-                        >Criar</button>
+                        >Create</button>
                     </div>
                 </form>
                 <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
-                    <h3>Ja tem uma conta?</h3>
-                    <Link to="/login" className="text-gradient">Entre na sua conta aqui</Link>
+                    <h3>Already have an account?</h3>
+                    <Link to="/login" className="text-gradient">Log in to your account here</Link>
                 </div>
             </div>
         </div>

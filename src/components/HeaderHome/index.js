@@ -27,7 +27,7 @@ function HeaderHome(props) {
                     <button 
                         onClick={handleLogout}
                         className="text-sm xl:text-base"
-                        >Sair
+                        >Logout
                     </button>
                 )}
             </div>

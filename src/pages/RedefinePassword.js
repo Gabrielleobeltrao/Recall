@@ -30,7 +30,7 @@ function RedefinePassword() {
                     onSubmit={handleSubmit} 
                     className="flex flex-col items-center w-full px-16"
                 >
-                    <h3 className="font-bold text-base pb-5 xl:text-lg">Insira seu email para redefinir a senha</h3>
+                    <h3 className="font-bold text-base pb-5 xl:text-lg">Enter your email to reset password</h3>
                     <input 
                         className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5 mb-8" 
                         type="email" 
@@ -42,13 +42,13 @@ function RedefinePassword() {
                     <button 
                         type="submit"
                         className="bg-gradient-to-r from-pink via-purple to-blue w-3/4 h-8 rounded-xl text-white font-bold tracking-wide text-lg"
-                    >Enviar email</button>
+                    >Send email</button>
                 </form>
-                {sending && <p>Enviando email...</p>}
+                {sending && <p>Sending email...</p>}
                 {error && <p className="text-red-500">{error.message}</p>}
                 <div className="flex gap-2.5 justify-center pt-2.5 font-bold text-sm">
-                    <h3>Ainda não tem uma conta?</h3>
-                    <Link to="/register" className="text-gradient">Crie uma conta aqui</Link>
+                    <h3>Not have an account yet?</h3>
+                    <Link to="/register" className="text-gradient">Create an account here</Link>
                 </div>
             </div>
         </section>
