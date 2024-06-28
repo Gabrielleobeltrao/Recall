@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'BRCobane';
+    src: url('/src/assets/font/BRCobane-Bold-BF654d96a1ac1b0.otf') format('opentype');
+    font-weight: Bold;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'BRCobane';
+     src: url('/src/assets/font/BRCobane-Regular-BF654d96a1718fa.otf') format('opentype');
+     font-weight: normal;
+     font-style: normal;
+ }
+  
