@@ -25,10 +25,10 @@ function Login() {
     }, [user, googleUser, navigate]);
 
     return (
-        <div className="flex flex-col justify-center h-screen py-10 xl:flex-row xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
+        <div className="flex flex-col justify-center h-dvh py-10 xl:flex-row xl:w-full xl:justify-between xl:h-screen xl:items-center xl:py-16">
             <div className="pt-10 xl:pt-0 xl:w-full">
                 <LogoByOne />
-                <form onSubmit={handleLogin} className="flex flex-col px-16">
+                <form onSubmit={handleLogin} className="flex flex-col px-10">
                     <input 
                         className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5 mb-5" 
                         type="email" 

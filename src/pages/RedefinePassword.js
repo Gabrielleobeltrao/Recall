@@ -28,7 +28,7 @@ function RedefinePassword() {
                 </div>
                 <form 
                     onSubmit={handleSubmit} 
-                    className="flex flex-col items-center w-full px-16"
+                    className="flex flex-col items-center w-full px-10"
                 >
                     <h3 className="font-bold text-base pb-5 xl:text-lg">Enter your email to reset password</h3>
                     <input 
