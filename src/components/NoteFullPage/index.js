@@ -5,9 +5,9 @@ import IconTrash from "../../assets/IconTrash.svg"
 
 function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote, setIsVisibleEditForm }) {
     return (
-        <div className={`w-full fixed flex flex-col items-center top-20 z-20 transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}>
+        <div className={`w-full fixed flex flex-col items-center top-10 z-20 transform transition-transform duration-700 ${isVisibleNote ? 'translate-x-0' : '-translate-x-dvw'}`}>
             <div 
-                className="w-screen max-w-2xl h-[calc(100%-10rem)] flex flex-col items-center"
+                className="w-screen h-[calc(100dvh-5rem)] flex flex-col items-center"
             >
                 <div className={`flex justify-end bg-${note ? note.color : 'pink'} w-[calc(100%-5rem)] rounded-tr-2xl rounded-tl-2xl pb-5`}>
                     <img
