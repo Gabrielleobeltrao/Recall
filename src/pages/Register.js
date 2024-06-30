@@ -34,7 +34,7 @@ function Register() {
         <div className="w-screen h-screen flex items-center xl:justify-center xl:items-center xl:py-16">
             <div className="w-full pb-28 xl:w-1/2">
                 <LogoByOne />
-                <form onSubmit={handleRegister} className="flex flex-col gap-5 px-16">
+                <form onSubmit={handleRegister} className="flex flex-col gap-5 px-10">
                     <input 
                         className="bg-neutral-200 rounded-2xl w-full pl-3 placeholder:text-black placeholder:text-base py-1.5" 
                         type="email" 

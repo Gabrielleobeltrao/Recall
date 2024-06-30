@@ -19,8 +19,8 @@ function NoteFullPage({ isVisibleNote, onClickVisibility, note, deleteNote, setI
                 </div>
                 <div className={`bg-${note ? note.color : 'pink'} w-[calc(100%-5rem)] z-20 flex flex-col items-center overflow-y-auto`}>
                     <div className="flex flex-col px-5 gap-3.5 text-white w-full h-full">
-                        <h3 className="font-bold tracking-wide text-xl break-all">{note ? note.title : ''}</h3>
-                        <h4 className="text-base break-all pb-5">{note ? note.text : ''}</h4>
+                        <h3 className="font-bold tracking-wide text-xl break-words whitespace-pre-line">{note ? note.title : ''}</h3>
+                        <h4 className="text-base break-words whitespace-pre-line pb-5">{note ? note.text : ''}</h4>
                     </div>
                 </div>
                 <div className="flex w-[calc(100%-5rem)] z-20 relative pr-16">

@@ -21,8 +21,8 @@ function FormEditNote({ isVisibleEditForm, setIsVisibleEditForm, note, editNote 
     };
 
     return (
-        <div className={`w-full h-full fixed flex flex-col items-center top-10 z-40 transform transition-transform duration-700 ${isVisibleEditForm ? 'translate-x-0' : '-translate-x-dvw'}`}>
-            <div className="bg-white w-screen max-w-md h-[calc(100%-5rem)] rounded-2xl flex flex-col items-center">
+        <div className={`w-full h-dvh px-3.5 fixed flex flex-col items-center top-10 z-40 transform transition-transform duration-700 ${isVisibleEditForm ? 'translate-x-0' : '-translate-x-dvw'}`}>
+            <div className="bg-white w-full max-w-md h-[calc(100%-5rem)] rounded-2xl flex flex-col items-center">
                 <img
                     onClick={() => setIsVisibleEditForm()}
                     className="w-7 h-7 self-end mt-5 mr-5" 

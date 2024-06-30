@@ -65,9 +65,10 @@ function Home() {
     return (
         <div>
             <HeaderHome email={user.email} />
-            <div className="flex flex-wrap justify-evenly items-start px-4">
+            <div className="flex flex-wrap px-4 pb-28">
                 {notes.map((note, index) => (
                     <div 
+                        className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2'
                         key={note.id} 
                         onClick={() => handleNoteClick(note)}
                     >
