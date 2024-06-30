@@ -104,7 +104,7 @@ function LandingPage() {
                     <Link to='/login'>Enter</Link>
                     <Link to='/register'>Create an account</Link>
                     <Link to='/redefinepassword'>Recover Password</Link>
-                    <a className="pt-1" href="#">
+                    <a className="pt-1" href="https://www.instagram.com/oneplataforma">
                         <img 
                             className="w-7 h-7"
                             src={Instagram}
